@@ -1,33 +1,9 @@
-import os
-from os.path import isdir, isfile, join
 from image_serializer import *
-
-def isNotHidden(x):
-	return x[0] != '.'
-
-def dirs(path):
-	objects = os.listdir(path)
-	return list(filter(isNotHidden, [x for x in objects if isdir(join(path, x))]))
-
-def files(path):
-	objects = os.listdir(path)
-	return list(filter(isNotHidden, [x for x in objects if isfile(join(path, x))]))
-
-def validAnswer(image, params):
-	if params['dataset'] == None:
-		return {
-			'dataset': image['dataset'],
-			'class': image['class'],
-			'label': image['label']
-		}
-	else:
-		return {
-			'class': image['class'],
-			'label': image['label']
-		}
+from common import *
 
 def loadImages(root_path='./images/'):
 	images = {}
+	amount = 0
 	datasets_names = dirs(root_path)
 
 	for d_name in datasets_names:
@@ -56,4 +32,6 @@ def loadImages(root_path='./images/'):
 					'data': serialized_images[i]
 				})
 
-	return images
+			amount += len(images[d_name][c_number])
+
+	return images, amount

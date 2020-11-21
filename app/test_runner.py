@@ -1,33 +1,38 @@
-from random import shuffle
-import requests
 import json
-from images_loader import validAnswer
+from common import *
+from request_maker import *
 
-def runTest(url, headers, images, dataset_name):
-	request_json = {'dataset': dataset_name}
+def loadTests(path = './tests/'):
+	tests = {}
 
-	images_for_test = []
-	if dataset_name == None:
-		for d_name in images:
-			for c_number in images[d_name]:
-				images_for_test += images[d_name][c_number]
-	else:
-		for class_number in images[dataset_name]:
-			images_for_test += images[dataset_name][class_number]
-	shuffle(images_for_test)
-	data_for_test = [img['data'] for img in images_for_test]
-	request_json['images'] = data_for_test
+	tests_paths = [path + name for name in files(path)]
+	for test_path in tests_paths:
+		with open(test_path) as test_file:
+			test = json.load(test_file)
+			tests[test['name']] = test
 
-	answers_for_test = [validAnswer(img, request_json) for img in images_for_test]
-	valid_response_json = {'predictions': answers_for_test}
+	return tests
 
-	response = requests.post(url, json=request_json, headers=headers)
-	response_json = json.loads(response.text)
+def runTest(baseUrl, headers, images, test):
+	test_report = {
+		'name': test['name'],
+		'requests': [],
+		'verdict': 'passed',
+	}
+	for request in test['requests']:
+		requestUrl = baseUrl + request['destination']['api_version'] \
+		                     + '/' + request['destination']['resource']
+		request_report = {
+			'url': requestUrl,
+			'results': []
+		}
+		amount = request['amount']
+		for i in range(amount):
+			result = makeRequest(requestUrl, headers, images, request['images'])
+			if result['valid'] == False:
+				test_report['verdict'] = 'failed'
+			request_report['results'].append(result)
 
-	for i in range(len(response_json['predictions'])):
-		got = response_json['predictions'][i]
-		valid = valid_response_json['predictions'][i]
-		if got != valid:
-			print(got, '!=', valid)
+		test_report['requests'].append(request_report)
 
-	return response_json == valid_response_json
+	return test_report
