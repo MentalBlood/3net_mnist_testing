@@ -1,0 +1,35 @@
+{
+	"name": "v2_integraion",
+	"requests": [
+		{
+			"destination": {
+				"api_version": "v2",
+				"resource": "classify"
+			},
+			"images": {
+				"amount": 1
+			},
+			"amount": 20
+		},
+		{
+			"destination": {
+				"api_version": "v2",
+				"resource": "classify"
+			},
+			"images": {
+				"amount": 5
+			},
+			"amount": 10
+		},
+		{
+			"destination": {
+				"api_version": "v2",
+				"resource": "classify"
+			},
+			"images": {
+				"amount": -1
+			},
+			"amount": 3
+		}
+	]
+}

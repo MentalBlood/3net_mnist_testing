@@ -15,24 +15,24 @@ def loadTests(path = './tests/'):
 
 def runTest(baseUrl, headers, images, test):
 	test_report = {
-		'name': test['name'],
-		'requests': [],
-		'verdict': 'passed',
+		'Test name': test['name'],
+		'Test result': 'passed',
+		'Requests': []
 	}
 	for request in test['requests']:
 		requestUrl = baseUrl + request['destination']['api_version'] \
 		                     + '/' + request['destination']['resource']
 		request_report = {
-			'url': requestUrl,
-			'results': []
+			'Request URL': requestUrl,
+			'Request results': []
 		}
 		amount = request['amount']
 		for i in range(amount):
 			result = makeRequest(requestUrl, headers, images, request['images'])
-			if result['valid'] == False:
-				test_report['verdict'] = 'failed'
-			request_report['results'].append(result)
+			if result['Is response valid'] == 'no':
+				test_report['Test result'] = 'failed'
+			request_report['Request results'].append(result)
 
-		test_report['requests'].append(request_report)
+		test_report['Requests'].append(request_report)
 
 	return test_report

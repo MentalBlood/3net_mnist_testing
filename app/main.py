@@ -6,6 +6,8 @@ import test_runner
 tests = test_runner.loadTests()
 print(len(tests), 'tests loaded')
 
+from reportGenerator import *
+
 from flask import Flask, request
 from flask_restful import Api, Resource
 app = Flask(__name__)
@@ -14,21 +16,28 @@ api = Api(app)
 
 @app.route('/test', methods=['POST'])
 def test():
-	baseUrl = 'http://localhost:5000/'
+	request_json = request.json
+
+	baseUrl = request_json['url']
 	headers = {'content-type': 'application/json'}
 	
-	request_json = request.json
-	
-	tests_to_do_names = request_json['tests']
-	tests_to_do = [tests[name] for name in tests_to_do_names]
+	tests_to_do = None
+	if 'tests' in request_json:
+		tests_to_do_names = request_json['tests']
+		tests_to_do = [tests[name] for name in tests_to_do_names]
+	else:
+		tests_to_do = [tests[name] for name in tests]
 	tests_results = [test_runner.runTest(baseUrl, headers, images, test) for test in tests_to_do]
 
-	return {
-		'total': len(tests_results),
-		'passed': len(list(filter(lambda t: t['verdict'] == 'passed', tests_results))),
-		'failed': len(list(filter(lambda t: t['verdict'] == 'failed', tests_results))),
-		'tests_results': tests_results
+	reportJSON = {
+		'Total tests made': len(tests_results),
+		'Passed': len(list(filter(lambda t: t['Test result'] == 'passed', tests_results))),
+		'Failed': len(list(filter(lambda t: t['Test result'] == 'failed', tests_results))),
+		'Results': tests_results
 	}
+	report = generateReport(reportJSON)
+	
+	return {'report': report}
 
 if __name__ == '__main__':
-	app.run(port = 6000)
+	app.run()

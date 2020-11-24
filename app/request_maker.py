@@ -44,13 +44,13 @@ def makeRequest(url, headers, images, params):
 
 	test_passed = response_json == valid_response_json
 	if test_passed:
-		return {'valid': True}
+		return {'Is response valid': 'yes'}
 	else:
 		errors = []
 		if not ('predictions' in response_json):
 			errors.append({
-				'type': 'structure',
-				'description': 'absence_of_predictions_field'
+				'Error type': 'invalid response JSON structure',
+				'Error description': 'absence_of_predictions_field'
 			})
 		else:
 			for i in range(len(response_json['predictions'])):
@@ -58,19 +58,19 @@ def makeRequest(url, headers, images, params):
 				valid = valid_response_json['predictions'][i]
 				if got != valid:
 					errors.append({
-						'type': 'prediction',
-						'description': {
-							'image_path': images_for_test[i]['path'],
-							'valid_answer': valid,
-							'got_answer': got
+						'Error type': 'incorrect prediction',
+						'Error description': {
+							'image path': images_for_test[i]['path'],
+							'valid answer': valid,
+							'got answer': got
 						}
 					})
 		if len(errors) == 0:
 			errors.append({
-				'type': 'structure',
-				'description': {
-					'valid_json': valid_response_json,
-					'got_json': response_json
+				'Error type': 'invalid response JSON structure',
+				'Error description': {
+					'valid json': valid_response_json,
+					'got json': response_json
 				}
 			})
-		return {'valid': False, 'errors': errors}
+		return {'Is response valid': 'no', 'Errors': errors}

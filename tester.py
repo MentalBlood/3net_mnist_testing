@@ -1,13 +1,13 @@
 import requests
 import json
-import yaml
 
-testUrl = 'http://localhost:6000/test'
+testUrl = 'http://localhost:8080/test'
 headers = {'content-type': 'application/json'}
-tests = ['all']
 
-response = requests.post(testUrl, json={'tests': tests}, headers=headers)
+url = 'http://172.17.0.2:80/'
+tests = ['v1_module_fashion-mnist']
+
+response = requests.post(testUrl, json={'url': url}, headers=headers)
 response_json = json.loads(response.text)
-response_json_as_yaml = yaml.dump(response_json, default_flow_style=False, sort_keys=False)
 
-print(response_json_as_yaml)
+print(response_json['report'])

@@ -1,31 +1,18 @@
 {
-	"name": "all",
+	"name": "v2_module_fashion-mnist",
 	"requests": [
 		{
 			"destination": {
-				"api_version": "v1",
-				"resource": "classify"
-			},
-			"images": {
-				"dataset": {
-					"name": "MNIST"
-				}, 
-				"amount": -1
-			},
-			"amount": 3
-		},
-		{
-			"destination": {
-				"api_version": "v1",
+				"api_version": "v2",
 				"resource": "classify"
 			},
 			"images": {
 				"dataset": {
 					"name": "FashionMNIST"
-				}, 
-				"amount": -1
+				},
+				"amount": 1
 			},
-			"amount": 3
+			"amount": 20
 		},
 		{
 			"destination": {
@@ -33,6 +20,22 @@
 				"resource": "classify"
 			},
 			"images": {
+				"dataset": {
+					"name": "FashionMNIST"
+				},
+				"amount": 5
+			},
+			"amount": 10
+		},
+		{
+			"destination": {
+				"api_version": "v2",
+				"resource": "classify"
+			},
+			"images": {
+				"dataset": {
+					"name": "FashionMNIST"
+				},
 				"amount": -1
 			},
 			"amount": 3
