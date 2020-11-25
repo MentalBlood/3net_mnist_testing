@@ -1,32 +1,41 @@
 {
-	"name": "v2_integration",
+	"name": "wow",
 	"requests": [
 		{
 			"destination": {
-				"api_version": "v2",
+				"api_version": "v1",
 				"resource": "classify"
 			},
 			"images": {
+				"dataset": {
+					"name": "FashionMNIST"
+				},
 				"amount": 1
 			},
 			"amount": 20
 		},
 		{
 			"destination": {
-				"api_version": "v2",
+				"api_version": "v1",
 				"resource": "classify"
 			},
 			"images": {
+				"dataset": {
+					"name": "FashionMNIST"
+				},
 				"amount": 5
 			},
 			"amount": 10
 		},
 		{
 			"destination": {
-				"api_version": "v2",
+				"api_version": "v1",
 				"resource": "classify"
 			},
 			"images": {
+				"dataset": {
+					"name": "FashionMNIST"
+				},
 				"amount": -1
 			},
 			"amount": 3

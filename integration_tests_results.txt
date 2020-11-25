@@ -1,0 +1,47 @@
+Total tests made: 1
+Passed: 1
+Failed: 0
+Results:
+- Test name: v2_integration
+  Test result: passed
+  Requests:
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+

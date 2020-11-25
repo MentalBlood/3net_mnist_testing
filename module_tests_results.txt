@@ -1,0 +1,173 @@
+Total tests made: 4
+Passed: 4
+Failed: 0
+Results:
+- Test name: v1_module_mnist
+  Test result: passed
+  Requests:
+  - Request URL: http://172.17.0.2:80/v1/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v1/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v1/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+- Test name: v1_module_fashion-mnist
+  Test result: passed
+  Requests:
+  - Request URL: http://172.17.0.2:80/v1/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v1/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v1/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+- Test name: v2_module_mnist
+  Test result: passed
+  Requests:
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+- Test name: v2_module_fashion-mnist
+  Test result: passed
+  Requests:
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+  - Request URL: http://172.17.0.2:80/v2/classify
+    Request results:
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+    - Is response valid: 'yes'
+
