@@ -30,7 +30,8 @@ def runTest(baseUrl, headers, images, test):
 		for i in range(amount):
 			result = makeRequest(requestUrl, headers, images, request['images'])
 			if result['Is response valid'] == 'no':
-				test_report['Test result'] = 'failed'
+				if len(list(filter(lambda e: e['Error type'].startswith('microservice error:'), result['Errors']))):
+					test_report['Test result'] = 'failed'
 			request_report['Request results'].append(result)
 
 		test_report['Requests'].append(request_report)

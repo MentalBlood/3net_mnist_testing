@@ -41,7 +41,208 @@ Results:
     - Is response valid: 'yes'
   - Request URL: http://172.17.0.2:80/v2/classify
     Request results:
-    - Is response valid: 'yes'
-    - Is response valid: 'yes'
-    - Is response valid: 'yes'
+    - Is response valid: 'no'
+      Errors:
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/FashionMNIST/2/3489.png
+          valid answer:
+            dataset: Fashion MNIST
+            class: 2
+            label: pullover
+          got answer:
+            dataset: Fashion MNIST
+            class: 3
+            label: dress
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/2/2488.png
+          valid answer:
+            dataset: MNIST
+            class: 2
+            label: '2'
+          got answer:
+            dataset: MNIST
+            class: 4
+            label: '4'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/6/3422.png
+          valid answer:
+            dataset: MNIST
+            class: 6
+            label: '6'
+          got answer:
+            dataset: MNIST
+            class: 0
+            label: '0'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/FashionMNIST/2/3532.png
+          valid answer:
+            dataset: Fashion MNIST
+            class: 2
+            label: pullover
+          got answer:
+            dataset: Fashion MNIST
+            class: 6
+            label: shirt
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/3/2770.png
+          valid answer:
+            dataset: MNIST
+            class: 3
+            label: '3'
+          got answer:
+            dataset: MNIST
+            class: 7
+            label: '7'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/2/2462.png
+          valid answer:
+            dataset: MNIST
+            class: 2
+            label: '2'
+          got answer:
+            dataset: MNIST
+            class: 0
+            label: '0'
+    - Is response valid: 'no'
+      Errors:
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/FashionMNIST/2/3489.png
+          valid answer:
+            dataset: Fashion MNIST
+            class: 2
+            label: pullover
+          got answer:
+            dataset: Fashion MNIST
+            class: 3
+            label: dress
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/2/2488.png
+          valid answer:
+            dataset: MNIST
+            class: 2
+            label: '2'
+          got answer:
+            dataset: MNIST
+            class: 4
+            label: '4'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/3/2770.png
+          valid answer:
+            dataset: MNIST
+            class: 3
+            label: '3'
+          got answer:
+            dataset: MNIST
+            class: 7
+            label: '7'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/6/3422.png
+          valid answer:
+            dataset: MNIST
+            class: 6
+            label: '6'
+          got answer:
+            dataset: MNIST
+            class: 0
+            label: '0'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/2/2462.png
+          valid answer:
+            dataset: MNIST
+            class: 2
+            label: '2'
+          got answer:
+            dataset: MNIST
+            class: 0
+            label: '0'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/FashionMNIST/2/3532.png
+          valid answer:
+            dataset: Fashion MNIST
+            class: 2
+            label: pullover
+          got answer:
+            dataset: Fashion MNIST
+            class: 6
+            label: shirt
+    - Is response valid: 'no'
+      Errors:
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/FashionMNIST/2/3489.png
+          valid answer:
+            dataset: Fashion MNIST
+            class: 2
+            label: pullover
+          got answer:
+            dataset: Fashion MNIST
+            class: 3
+            label: dress
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/3/2770.png
+          valid answer:
+            dataset: MNIST
+            class: 3
+            label: '3'
+          got answer:
+            dataset: MNIST
+            class: 7
+            label: '7'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/FashionMNIST/2/3532.png
+          valid answer:
+            dataset: Fashion MNIST
+            class: 2
+            label: pullover
+          got answer:
+            dataset: Fashion MNIST
+            class: 6
+            label: shirt
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/2/2488.png
+          valid answer:
+            dataset: MNIST
+            class: 2
+            label: '2'
+          got answer:
+            dataset: MNIST
+            class: 4
+            label: '4'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/6/3422.png
+          valid answer:
+            dataset: MNIST
+            class: 6
+            label: '6'
+          got answer:
+            dataset: MNIST
+            class: 0
+            label: '0'
+      - Error type: 'model error: incorrect prediction'
+        Error description:
+          image path: ./images/MNIST/2/2462.png
+          valid answer:
+            dataset: MNIST
+            class: 2
+            label: '2'
+          got answer:
+            dataset: MNIST
+            class: 0
+            label: '0'
 

@@ -49,7 +49,7 @@ def makeRequest(url, headers, images, params):
 		errors = []
 		if not ('predictions' in response_json):
 			errors.append({
-				'Error type': 'invalid response JSON structure',
+				'Error type': 'microservice error: invalid response JSON structure',
 				'Error description': 'absence_of_predictions_field'
 			})
 		else:
@@ -58,7 +58,7 @@ def makeRequest(url, headers, images, params):
 				valid = valid_response_json['predictions'][i]
 				if got != valid:
 					errors.append({
-						'Error type': 'incorrect prediction',
+						'Error type': 'model error: incorrect prediction',
 						'Error description': {
 							'image path': images_for_test[i]['path'],
 							'valid answer': valid,
@@ -67,7 +67,7 @@ def makeRequest(url, headers, images, params):
 					})
 		if len(errors) == 0:
 			errors.append({
-				'Error type': 'invalid response JSON structure',
+				'Error type': 'microservice error: invalid response JSON structure',
 				'Error description': {
 					'valid json': valid_response_json,
 					'got json': response_json
